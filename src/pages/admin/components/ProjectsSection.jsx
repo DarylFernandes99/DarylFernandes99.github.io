@@ -506,6 +506,9 @@ const ProjectsSection = () => {
                 projectData.additional_data.readme_file = projectData.detail_page || '';
             }
 
+            // Remove detail_page from projectData to keep the database payload clean
+            delete projectData.detail_page;
+
             let response;
 
             if (editingItem) {
